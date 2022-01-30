@@ -29,3 +29,18 @@ Sub GeraPDFOrient()
     Next i
 End Sub
 ```
+
+- - If you already have a single PDF file, you can use a PDF-Spliter like mine[^1]:
+
+[^1]: For more details, see: https://github.com/viniciusblanc/pdf-splitter
+
+```
+from pikepdf import Pdf
+
+pdf = Pdf.open('Certificados.pdf')
+
+for n, page in enumerate(pdf.pages):
+    dst = Pdf.new()
+    dst.pages.append(page)
+    dst.save(f'Certificado{n+1:02d}.pdf')
+```
