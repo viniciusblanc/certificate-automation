@@ -29,4 +29,3 @@ Sub GeraPDFOrient()
     Next i
 End Sub
 ```
-
