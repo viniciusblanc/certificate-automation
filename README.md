@@ -44,3 +44,6 @@ for n, page in enumerate(pdf.pages):
     dst.pages.append(page)
     dst.save(f'Certificado{n+1:02d}.pdf')
 ```
+
+- The 3rd step is to upload all these files to a Google Drive.
+- Once there, you must create a Google Sheet with the information that will be used to automate the emails.
